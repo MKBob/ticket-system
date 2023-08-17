@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Suspension</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="ticket_nav"> 
+    <div class="nav_items">
+        <div>
+        <h2 class="ticket_nav_text">Hussaini Suspension Bridge Ticketing System</h2>
+    </div>
+        <div style="display: flex;">
+            <img class="nav-img" src="./imgs/icon@4x 1.png" alt="">
+        <a style="text-decoration: none;" href="./index.html" class="ticket_nav_btn">Logout</a>
+        </div>
+    </div>
+    
+    </nav>
+ 
+ 
+    <!-- SECOND SECTION START HERE -->
+    <form action="submit" id="add-user">
+    <div class="second_section">
+            
+        <div>
+            <div class="icon_text">
+                <i style="padding-right: 5px;" class="fa-solid fa-user"></i>
+                <p  class="cont_text">NAME</p>
+            </div>
+
+            <input type="text"  id="name" class="text" placeholder="NAME">
+        </div>
+        <div>
+            <div  class="icon_text">
+                <i  style="padding-right: 5px;" class="fa-solid fa-people-group"></i>
+                <p class="cont_text">PERSONS</p>
+            </div> 
+            
+            <input type="number" class="text" placeholder="PERSONS">
+        </div>
+
+        
+        <div class="drop_down_section">
+            <h3 class="tic_heading">Select a ticket type</h3>
+            <select id="ticket-dropdown">
+                 <div class="drop_list">
+                    <option value="village">Local</option>
+                    <i class="fa-solid fa-mountains"></i>
+                 </div>
+                 <div class="drop_list">
+                    <option value="city">National</option>
+                    <i class="fa-solid fa-flag-checkered"></i>
+                 </div>
+                 <div class="drop_list">
+                    <option value="country">International</option>
+                    <i class="fa-sharp fa-solid fa-flag"></i>
+                </div>
+            </select>
+            
+        </div>
+        <button class="ticket-print-btn">Submit</button>
+        
+    </div>
+</form>
+    <!-- SECOND SECTION ENDS HERE -->
+    <!-- THIRD SECTION START HERE -->
+    <section class="main_section">
+    <div class="third_section">
+
+        <div class="ticket-main">
+            <div class="container">
+                <div class="logo-head">
+                <img class="t-logo" src="./imgs/sample.png">
+                <h4 class="ticket-print-text">Hussaini Suspension Bridge Ticketing System</h4>
+            </div>
+                <table id="ticket">
+                    <thead>
+                        <tr>
+                            <th id="user-name"><span>Name: </span>  <span class="name-field"></span></th>
+                            <th>Date: <span id='date-time'></span></th>
+                            <th id="total-person"><span> No of Persons: </span><span></span></th>
+                            <th id="total-price"><span>Total:</span> <span></span> </th>
+                        </tr>
+                    </thead>
+                </table>
+                <div style="display: flex; justify-content: flex-end; margin-right: 10px;">
+                <img style="width: 50px; height: 50px;" src="./imgs/icon@4x 1.png" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="print_border">
+        <h3 class="border_text">SELECT TICKET TYPE</h3>
+        <div  class="border_ticket">
+          <div  class="div_border">
+            <a class="print_text">Individual-Print</a>
+          </div>
+          <div class="div_border">
+            <p  class="print_text">Combine-Print</p>
+          </div>
+        </div>
+    </div>
+</section>
+    <!-- THIRD SECTION ENDS HERE -->
+    
+    <!-- JS link -->
+<script src="./js/main.js"></script>
+<!-- javascript -->
+<script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+    </script>
+
+
+</body>
+
+</html>
